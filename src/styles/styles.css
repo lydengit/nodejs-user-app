@@ -1,0 +1,58 @@
+body {
+    background-color: #404040;
+    color: whitesmoke;
+    font-family: sans-serif
+}
+
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-left: 10px;
+}
+
+nav a {
+    color: yellowgreen;
+}
+
+.users {
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-user ul {
+    padding: 0;
+}
+
+.add-user ul li {
+    margin-bottom: 5px;
+}
+
+.add-user ul li input, .search-user {
+    padding: 5px;
+}
+
+.add-user ul li:last-child {
+    text-align: right;
+}
+
+.add-user ul li {
+    list-style: none;
+}
+
+.about {
+    width:  800px;
+    margin: auto;
+}

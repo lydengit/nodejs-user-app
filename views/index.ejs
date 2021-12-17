@@ -1,0 +1,34 @@
+<%-include('./partials/head.ejs')%>
+<div class="main-container">
+    <%-include('./partials/header.ejs')%>
+    <div class="users">
+        <div class="add-user">
+            <h3>Add User</h3>
+            <form action="/users/add-user" method="POST">
+                <ul>
+                    <li><input type="text" name="firstName" placeholder="First name..." required></li>
+                    <li><input type="text" name="lastName" placeholder="Last name..." required></li>
+                    <li><input type="text" name="email" placeholder="Email..." required></li>
+                    <li><input type="submit" value="Submit"></li>
+                </ul>
+            </form>
+        </div>
+        <div class="all-users">
+            <h3>Search User</h3>
+            <div><input type="text" class="search-user" placeholder="Search..."></div>
+            <div class="list-users">
+                <%if(users.length > 0){%>
+                <ul>
+                    <%for(let i =0; i < users.length; i++){%>
+                        <li><%=users[i].firstName%> <%=users[i].lastName%> - <%=users[i].email%>
+                            <button type="button" class="delete-user" data-id="<%=users[i].id%>">&#10005;</button>
+                        </li>
+                    <%}%>
+                </ul>
+                <%} else {%> <p>No Users</p> <%}%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%-include('./partials/footer.ejs')%>
